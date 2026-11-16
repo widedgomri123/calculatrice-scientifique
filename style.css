@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dceee2, #a8cbb5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator {
+    background: #172b24;
+    width: 390px;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #b8d9c2;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.mode button {
+    background: #4b9669;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+    border: none;
+    border-radius: 12px;
+    background: #e9f5ed;
+    margin-bottom: 18px;
+    padding: 15px;
+    font-size: 25px;
+    text-align: right;
+    color: #172b24;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+}
+
+.buttons button {
+    height: 53px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+}
+
+.buttons button:not(.special):not(.scientific):not(.operator):not(.equal) {
+    background: #e4eee7;
+    color: #172b24;
+}
+
+.special {
+    background: #d6b56d;
+    color: #172b24;
+}
+
+.scientific {
+    background: #385b49;
+    color: white;
+}
+
+.operator {
+    background: #4b9669;
+    color: white;
+}
+
+.equal {
+    background: #23834c;
+    color: white;
+    grid-row: span 2;
+}
+
+.footer {
+    text-align: center;
+    color: #a8cbb5;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+@media (max-width: 420px) {
+    .calculator {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .buttons button {
+        height: 48px;
+    }
+}

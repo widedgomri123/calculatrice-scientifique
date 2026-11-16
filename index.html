@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculatrice Scientifique</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Scientific Calculator</h2>
+
+      <div class="mode">
+        <button id="angleMode" onclick="toggleMode()">DEG</button>
+        <span>Mode scientifique</span>
+      </div>
+
+      <input type="text" id="display" placeholder="0" readonly />
+
+      <div class="buttons">
+        <button class="special" onclick="clearDisplay()">AC</button>
+        <button class="special" onclick="deleteLast()">DEL</button>
+        <button class="special" onclick="append('(')">(</button>
+        <button class="special" onclick="append(')')">)</button>
+
+        <button class="scientific" onclick="append('sin(')">sin</button>
+        <button class="scientific" onclick="append('cos(')">cos</button>
+        <button class="scientific" onclick="append('tan(')">tan</button>
+        <button class="operator" onclick="append('/')">÷</button>
+
+        <button class="scientific" onclick="append('sqrt(')">√</button>
+        <button class="scientific" onclick="append('^2')">x²</button>
+        <button class="scientific" onclick="append('^')">xʸ</button>
+        <button class="operator" onclick="append('*')">×</button>
+
+        <button class="scientific" onclick="append('log(')">log</button>
+        <button class="scientific" onclick="append('ln(')">ln</button>
+        <button class="scientific" onclick="append('pi')">π</button>
+        <button class="operator" onclick="append('-')">−</button>
+
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button class="operator" onclick="append('+')">+</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button class="scientific" onclick="append('e')">e</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+        <button onclick="append('0')">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="append('%')">%</button>
+      </div>
+
+      <p class="footer">Scientific Calculator © 2026</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
