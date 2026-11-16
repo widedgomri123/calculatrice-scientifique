@@ -23,6 +23,9 @@ A modern and responsive scientific calculator web application developed using HT
 1. Clone the repository.
 2. Open the project folder.
 3. Open `index.html` in your browser.
+ ##  Application Screenshot
+
+![Calculatrice](screenshots/cal.png)
 
 ##  Author
 
